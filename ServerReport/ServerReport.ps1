@@ -12,12 +12,3 @@ $obj = [PSCustomObject]@{
 
 # show output
 Write-Output $obj
-
-
-
-
-
-
-
-
-
