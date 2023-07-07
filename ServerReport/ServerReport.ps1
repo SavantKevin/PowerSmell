@@ -14,3 +14,10 @@ $obj = [PSCustomObject]@{
 
 # show output
 Write-Output $obj
+
+# find the number of temporary files on the C drive and subdirectories
+$rootPath = "C:\"
+$tempFilePattern = "*.tmp"
+$files = Get-ChildItem -Path $rootPath -Filter $tempFilePattern -File -Recurse
+$fileCount = $files.Count
+Write-Output "Number of temporary files found: $fileCount"
